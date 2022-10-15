@@ -157,8 +157,13 @@ resource "aws_instance" "kube-master" {
     instance_type = "t3a.medium"
     iam_instance_profile = module.iam.master_profile_name
     vpc_security_group_ids = [aws_security_group.petclinic-kube-master-sg.id, aws_security_group.petclinic-mutual-sg.id]
+<<<<<<< HEAD
     key_name = "FirstKey"
     subnet_id = "subnet-04a3d56e108135d74"  # select own subnet_id of us-east-1a
+=======
+    key_name = "clarus"
+    subnet_id = "subnet-091334eeebca5880e"  # select own subnet_id of us-east-1a
+>>>>>>> feature/msp-15
     availability_zone = "us-east-1a"
     tags = {
         Name = "kube-master"
@@ -175,8 +180,13 @@ resource "aws_instance" "worker-1" {
     instance_type = "t3a.medium"
         iam_instance_profile = module.iam.worker_profile_name
     vpc_security_group_ids = [aws_security_group.petclinic-kube-worker-sg.id, aws_security_group.petclinic-mutual-sg.id]
+<<<<<<< HEAD
     key_name = "FirstKey"
     subnet_id = "subnet-04a3d56e108135d74  # select own subnet_id of us-east-1a
+=======
+    key_name = "clarus"
+    subnet_id = "subnet-091334eeebca5880e"  # select own subnet_id of us-east-1a
+>>>>>>> feature/msp-15
     availability_zone = "us-east-1a"
     tags = {
         Name = "worker-1"
@@ -193,8 +203,13 @@ resource "aws_instance" "worker-2" {
     instance_type = "t3a.medium"
     iam_instance_profile = module.iam.worker_profile_name
     vpc_security_group_ids = [aws_security_group.petclinic-kube-worker-sg.id, aws_security_group.petclinic-mutual-sg.id]
+<<<<<<< HEAD
     key_name = "FirstKey"
     subnet_id = "subnet-04a3d56e108135d74"  # select own subnet_id of us-east-1a
+=======
+    key_name = "clarus"
+    subnet_id = "subnet-091334eeebca5880e"  # select own subnet_id of us-east-1a
+>>>>>>> feature/msp-15
     availability_zone = "us-east-1a"
     tags = {
         Name = "worker-2"
